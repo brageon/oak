@@ -15,10 +15,9 @@ body {
   margin-bottom: 20px;
 }
 .profile-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
+  display: block;
+  margin: 0 auto;
+  width: 150px;
   height: auto;
   border-radius: 50%;
 }
