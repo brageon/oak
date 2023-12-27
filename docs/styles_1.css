@@ -36,6 +36,9 @@ h1 {
 .bio, .projects {
   margin-bottom: 60px;
 }
+.bio h4 {
+  color: #f4f4f4;
+}
 a {
   color: #333;
   text-decoration: none;
