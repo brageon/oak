@@ -33,7 +33,7 @@ h1 {
   position: absolute;
   top: 10px;
   left: 10px;
-.bio, .projects {
+.projects {
   margin-bottom: 60px;
 }
 .bio h4 {
