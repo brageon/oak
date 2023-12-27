@@ -29,8 +29,8 @@ h1 {
 
 #promptButton {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  center: 20px;
+  center: 20px;
 }
 
 .bio, .projects {
