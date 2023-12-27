@@ -34,10 +34,6 @@ h1 {
 #promptButton {
   position: fixed;
 }
-.projects {
-  position: fixed;
-  margin-bottom: 60px;
-}
 a {
   color: #333;
   text-decoration: none;
