@@ -22,7 +22,10 @@ body {
 h1 {
   margin-top: 10px;
 }
-@media (
+@media (max-width: 768px) {
+  .bio {
+    margin-top: 0;
+}}
 .container {
   position: relative;
 }
