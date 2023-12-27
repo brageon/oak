@@ -27,7 +27,6 @@ const rl = readline.createInterface({
   output: process.stdout });
 rl.question('Enter a sentence: ', (inputSentence) => {
   const activeSentence = activeToPassive(inputSentence);
-  console.log('Active sentence:', activeSentence);
   const passiveSentence = passiveToActive(inputSentence);
-  console.log('Passive sentence:', passiveSentence);
+  document.getElementById('userInput').textContent = `Active sentence: ${activeSentence}\nPassive sentence: ${passiveSentence}`;
   rl.close(); });
