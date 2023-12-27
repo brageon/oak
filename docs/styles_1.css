@@ -28,9 +28,10 @@ h1 {
 }
 
 #promptButton {
-  position: absolute;
-  bottom: 20px;
-  center: 20px;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .bio, .projects {
