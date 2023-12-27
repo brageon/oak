@@ -20,55 +20,61 @@
       </p>
   </header>
   <main>
-      <section class="bio">
-          <h2>About Me</h2>
-          <p>Hello! I'm Your Name, a web developer with a passion
+      <div class="container">
+          <button id="promptButton">Modality</button>
+          <script src="act.js"></script>
+          <script>
+              const promptButton = document.getElementById('promptButton');
+              promptButton.addEventListener('click', async () => {
+                const inputSentence = await prompt('Enter your message:');
+                // Asynchronously process the sentence
+                promptButton.textContent = 'Processing...';
+                let finished = false;
+                let activeSentence;
+                let passiveSentence;
+                try {
+                  const { activeSentence, passiveSentence } = await processSentence(inputSentence);
+                  finished = true;
+                  promptButton.textContent = 'Active sentence:';
+                  console.log('Active sentence:', activeSentence);
+                  promptButton.textContent = 'Passive sentence:';
+                  console.log('Passive sentence:', passiveSentence);
+                } catch (error) {
+                  console.error(error);
+                }
+              });
+              async function processSentence(sentence) {
+                const storedSentence = sentence;
+                await readline.createInterface({
+                  input: process.stdin,
+                  output: process.stdout });
+                // Simulate loading act.js
+                await new Promise((resolve) => {
+                  setTimeout(resolve, 1000); // Wait for 1 second
+                });
+                const activeSentence = activeToPassive(storedSentence);
+                const passiveSentence = passiveToActive(storedSentence);
+                return {
+                  activeSentence: activeSentence,
+                  passiveSentence: passiveSentence
+                };
+              }
+          </script>
+          <section class="bio">
+              <h2>About Me</h2>
+              <p>Hello! I'm Your Name, a web developer with a passion
               for front-end design and user experience.
               I've been building websites for over 5 years
                 and love what I do.</p>
-      </section>
-      <section class="projects">
-          <h2>Projects</h2>
-          <ul>
-              <li><a href="#">Project One</a></li>
-              <li><a href="#">Project Two</a></li>
-              <li><a href="#">Project Three</a></li>
+          </section>
+          <section class="projects">
+              <h2>Projects</h2>
+              <ul>
+                  <li><a href="#">Project One</a></li>
+                  <li><a href="#">Project Two</a></li>
+                  <li><a href="#">Project Three</a></li>
               </ul>
-      </section>
-        <button id="promptButton">Modality</button>
-<script src="act.js"></script>
-<script>
-  const promptButton = document.getElementById('promptButton');
-  promptButton.addEventListener('click', async () => {
-    const inputSentence = await prompt('Enter your message:');
-    // Asynchronously process the sentence
-    promptButton.textContent = 'Processing...';
-    let finished = false;
-    let activeSentence;
-    let passiveSentence;
-    try {
-      const { activeSentence, passiveSentence } = await processSentence(inputSentence);
-      finished = true;
-      promptButton.textContent = 'Active sentence:';
-      console.log('Active sentence:', activeSentence);
-      promptButton.textContent = 'Passive sentence:';
-      console.log('Passive sentence:', passiveSentence);
-    } catch (error) {
-      console.error(error);
-    }});
-  async function processSentence(sentence) {
-    const storedSentence = sentence;
-    await readline.createInterface({
-      input: process.stdin,
-      output: process.stdout });
-    // Simulate loading act.js
-    await new Promise((resolve) => {
-      setTimeout(resolve, 1000); });
-    const activeSentence = activeToPassive(storedSentence);
-    const passiveSentence = passiveToActive(storedSentence);
-    return {
-      activeSentence: activeSentence,
-      passiveSentence: passiveSentence
-    }; }
-</script>
-</main></body></html>
+          </section>
+      </div>
+  </main></body></html>
+
