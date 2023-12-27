@@ -27,11 +27,14 @@ h1 {
   margin-top: 10px;
 }
 
-#promptButton {
+main {
   position: relative;
+}
+
+#promptButton {
+  position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 20px;
 }
 
 .bio, .projects {
