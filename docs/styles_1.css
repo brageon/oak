@@ -31,12 +31,8 @@ h1 {
 .bio {
   margin-top: 20px;
 }
-.bio h4 {
-  color: #fff;
-  text-decoration: none;
-}
 #promptButton {
-  position: absolute;
+  position: fixed;
 }
 .projects {
   margin-bottom: 60px;
