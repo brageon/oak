@@ -15,9 +15,9 @@ body {
   margin-bottom: 20px;
 }
 .profile-img {
-  width: 90px;
+  width: 120px;
   height: auto;
-  border-radius: 30%;
+  border-radius: 40%;
 }
 h1 {
   margin-top: 10px;
@@ -29,7 +29,7 @@ h1 {
   margin-top: 20px;
 }
 #promptButton {
-  position: fixed;
+  position: relative;
 }
 a {
   color: #333;
