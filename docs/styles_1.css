@@ -35,6 +35,7 @@ h1 {
   position: fixed;
 }
 .projects {
+  position: fixed;
   margin-bottom: 60px;
 }
 a {
