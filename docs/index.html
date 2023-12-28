@@ -70,7 +70,28 @@
     <p>
     <a href="https://twitter.com/yourusername" target="_blank">Twitter</a> |
     <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-    </p>    
+    </p>
+    <div class="input-box">
+      <input type="text" id="input" onkeyup="translate()" />
+      <button onclick="translate()">Translate</button>
+    </div>
+    <div class="output-box">
+      <input type="text" id="output" disabled />
+    </div>
+    <script>
+      function translate() {
+        const inputText = document.getElementById('input').value;
+        const translations = [];
+        for (const letter of inputText) {
+          const asciiCode = letter.charCodeAt();
+          const integer = asciiCode - 96;
+          translations.push(integer); }
+        const outputText = translations.join(', ');
+        document.getElementById('output').value = outputText; }
+      const input = document.getElementById('input');
+      input.addEventListener('keyup', translate);
+      document.getElementById('translateButton').addEventListener('click', translate);
+    </script>  
   </main>
 </body>
 </html
