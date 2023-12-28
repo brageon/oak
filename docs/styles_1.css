@@ -24,24 +24,22 @@ body {
 h1 {
   text-align: center;
   margin-top: 10px;
+/* Desktop */
+@media (min-width: 768px) {
+  .bio,
+  .projects
+  .contact {
+    width: 33%;
+    margin: 0 auto;
+  }
 }
+/* Mobile */
 @media (max-width: 768px) {
-    margin-top: 0;
-}
-.bio {
-  position: relative;
-  text-align: center;
-  margin-top: 20px;
-}
-.projects {
-  position: relative;
-  text-align: center;
-  margin-top: 20px;
-}
-.contact {
-  position: relative;
-  text-align: center;
-  margin-top: 20px;
+  .bio,
+  .projects
+  .contact {
+    width: 100%;
+  }
 }
 #promptButton {
   position: fixed;
@@ -66,18 +64,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.input-box, .output-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
+/* Desktop */
+.input-box {
+  position: sticky;
+  top: 20px;
 }
-.input-box input, {
-  width: 100%;
-  height: 50px;
-  padding: 10px;
-  border: 1px solid #333;
+.output-box {
+  position: sticky;
+  top: 80px;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .input-box,
+  .output-box {
+    position: absolute;
+    top: 0;
+  }
+  .input-box {
+    left: 0;
+    width: 50%;
+  }
+  .output-box {
+    right: 0;
+    width: 50%;
+  }
 }
