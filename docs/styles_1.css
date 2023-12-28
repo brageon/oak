@@ -31,7 +31,19 @@ h1 {
   margin-top: 20px;
 }
 #promptButton {
-  position: flexible;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 17px;
+  border: 1px solid #ccc;
+  background-color: #dfa;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: top;
+  line-height: 0.05px;
+  cursor: pointer;
 }
 a {
   color: #333;
