@@ -36,6 +36,10 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
+.contact {
+  text-align: center;
+  margin-top: 20px;
+}
 #promptButton {
   position: fixed;
   top: 46%;
