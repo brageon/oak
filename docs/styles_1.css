@@ -14,9 +14,10 @@ body {
   align-items: center;
 }
 .header {
-  text-align: center;  
+  text-align: center;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .profile-img {
   display: block;
@@ -35,7 +36,7 @@ h1 {
   .projects {
     width: 33 %; 
     margin: 0 auto;
-}}
+  }}
 /* Mobile */
 @media (max-width: 768px) {
   .bio,
@@ -44,17 +45,17 @@ h1 {
   }
   .input-box,
   .output-box {
-    position: absolute;
+    position: absolute; 
     top: 0;
   }
   .input-box {
     left: 0; 
-    width: 50%;
+    width: 50%; 
   }
   .output-box {
     right: 0; 
     width: 50%; 
-}}
+  }}
 #promptButton {
   position: fixed; 
   top: 10px;
@@ -66,7 +67,7 @@ h1 {
   padding: 5px;
   border-radius: 5px; 
   text-align: center;
-  line-height: 0.05px;
+  line-height: 0.05px; 
   cursor: pointer;
 }
 a {
@@ -98,6 +99,6 @@ a:hover {
     width: 50%; 
   }
   .output-box {
-    right: 0;
+    right: 0; 
     width: 50%; 
 }}
