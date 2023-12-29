@@ -9,7 +9,7 @@ body {
   line-height: 1.6;
   padding: 80px;
   background-color: #f4f4f4;  
-  align-items: center;
+  margin-bottom: 20px;
 }
 .header {
   text-align: center;
