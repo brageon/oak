@@ -14,88 +14,88 @@ body {
   align-items: center;
 }
 .header {
-  text-align: left; /* Set the header text alignment to left */
+  text-align: center; 
 }
 .profile-img {
   display: block;
-  margin: 0 auto; /* Center the image horizontally */
+  margin: 0 auto; 
   width: 150px;
   height: auto;
   border-radius: 50%;
 }
 h1 {
-  text-align: left; /* Set the heading text alignment to left */
+  text-align: left; 
   margin-top: 10px;
 }
 /* Desktop */
 @media (min-width: 768px) {
   .bio,
   .projects {
-    width: 33 %; /* Adjust the width of sections for desktop layout */
+    width: 33 %; 
     margin: 0 auto;
 }}
 /* Mobile */
 @media (max-width: 768px) {
   .bio,
   .projects {
-    width: 100%; /* Adjust the width of sections for mobile layout */
+    width: 100%; 
   }
   .input-box,
   .output-box {
-    position: absolute; /* Position the input and output boxes for mobile layout */
+    position: absolute;
     top: 0;
   }
   .input-box {
-    left: 0; /* Position the input box at the left side */
-    width: 50%; /* Set the width of the input box */
+    left: 0; 
+    width: 50%;
   }
   .output-box {
-    right: 0; /* Position the output box at the right side */
-    width: 50%; /* Set the width of the output box */
+    right: 0; 
+    width: 50%; 
 }}
 #promptButton {
-  position: fixed; /* Position the prompt button fixed to the top right corner */
+  position: fixed; 
   top: 10px;
   right: 10px;
-  width: 100px; /* Set the width of the prompt button */
+  width: 100px; 
   height: 17px;
-  border: 1px solid #ccc; /* Set border properties */
+  border: 1px solid #ccc; 
   background-color: #dfa;
   padding: 5px;
-  border-radius: 5px; /* Set border radius properties */
+  border-radius: 5px; 
   text-align: center;
-  line-height: 0.05px; /* Set line-height to 0.05px for a better appearance */
+  line-height: 0.05px;
   cursor: pointer;
 }
 a {
-  color: #333; /* Set link text color to #333 */
-  text-align: center; /* Set link text alignment to center */
-  text-decoration: none; /* Remove underline from links */
+  color: #333; 
+  text-align: center; 
+  text-decoration: none; 
 }
 a:hover {
-  text-decoration: underline; /* Add underline to links on hover */
+  text-decoration: underline; 
 }
 /* Desktop */
 .input-box {
-  position: sticky; /* Position the input and output boxes sticky to the top */
-  top: 20px; /* Set the top position of the input box to 20px */
+  position: sticky; 
+  top: 20px; 
 }
 .output-box {
-  position: sticky; /* Position the input and output boxes sticky to the top */
-  top: 80px; /* Set the top position of the output box to 80px */
+  position: sticky; 
+  top: 80px; 
 }
 /* Mobile */
 @media (max-width: 768px) {
   .input-box,
   .output-box {
-    position: absolute; /* Position the input and output boxes for mobile layout */
+    position: absolute; 
     top: 0;
   }
   .input-box {
-    left: 0; /* Position the input box at the left side */
-    width: 50%; /* Set the width of the input box */
+    left: 0; 
+    width: 50%; 
   }
   .output-box {
-    right: 0; /* Position the output box at the right side */
-    width: 50%; /* Set the width of the output box */
+    right: 0;
+    width: 50%; 
 }}
