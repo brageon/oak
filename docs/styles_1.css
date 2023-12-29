@@ -1,7 +1,9 @@
-/* Basic Reset */
-* {
+/* CSS Reset */
+html, body {
   margin: 0;
   padding: 0;
+}
+* {
   box-sizing: border-box;
 }
 body {
@@ -9,6 +11,10 @@ body {
   line-height: 1.6;
   padding: 80px;
   background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .header {
   text-align: center;
