@@ -75,8 +75,8 @@ a:hover {
 @media (max-width: 768px) {
   .input-box,
   .output-box {
-    position: relative;
-    top: 0;
+    position: sticky;
+    top: 50px;
   }
   .input-box {
     left: 0;
