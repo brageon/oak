@@ -29,15 +29,9 @@ h1 {
   .bio,
   .projects 
   .contact {
-    width: 33 %;
-    margin: 0 auto;
-}}
-/* Mobile */
-@media (max-width: 768px) {
-  .bio,
-  .projects
-  .contact {
-    width: 100%;
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
 }}
 #promptButton {
   position: fixed;
@@ -62,27 +56,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-/* Desktop */
-.input-box {
-  position: sticky;
-  top: 20px;
-}
-.output-box {
-  position: sticky;
-  top: 80px;
-}
-/* Mobile */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .input-box,
   .output-box {
-    position: absolute;
-    top: 0;
-  }
-  .input-box {
-    left: 0;
-    width: 50%;
-  }
-  .output-box {
-    right: 0;
-    width: 50%;
+    position: sticky;
+    top: 20px;
+    top: 80px;
 }}
