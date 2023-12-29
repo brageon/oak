@@ -1,9 +1,7 @@
-/* CSS Reset */
+/* Basic Reset */
 html, body {
   margin: 0;
   padding: 0;
-}
-* {
   box-sizing: border-box;
 }
 body {
@@ -14,81 +12,90 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .header {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: left; /* Set the header text alignment to left */
 }
 .profile-img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the image horizontally */
   width: 150px;
   height: auto;
   border-radius: 50%;
 }
 h1 {
-  text-align: center;
+  text-align: left; /* Set the heading text alignment to left */
   margin-top: 10px;
+}
 /* Desktop */
 @media (min-width: 768px) {
   .bio,
-  .projects 
-  .contact {
-    width: 33 %;
+  .projects {
+    width: 33 %; /* Adjust the width of sections for desktop layout */
     margin: 0 auto;
 }}
 /* Mobile */
 @media (max-width: 768px) {
   .bio,
-  .projects
-  .contact {
-    width: 100%;
+  .projects {
+    width: 100%; /* Adjust the width of sections for mobile layout */
+  }
+  .input-box,
+  .output-box {
+    position: absolute; /* Position the input and output boxes for mobile layout */
+    top: 0;
+  }
+  .input-box {
+    left: 0; /* Position the input box at the left side */
+    width: 50%; /* Set the width of the input box */
+  }
+  .output-box {
+    right: 0; /* Position the output box at the right side */
+    width: 50%; /* Set the width of the output box */
 }}
 #promptButton {
-  position: fixed;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
+  position: fixed; /* Position the prompt button fixed to the top right corner */
+  top: 10px;
+  right: 10px;
+  width: 100px; /* Set the width of the prompt button */
   height: 17px;
-  border: 1px solid #ccc;
+  border: 1px solid #ccc; /* Set border properties */
   background-color: #dfa;
   padding: 5px;
-  border-radius: 5px;
-  text-align: top;
-  line-height: 0.05px;
+  border-radius: 5px; /* Set border radius properties */
+  text-align: center;
+  line-height: 0.05px; /* Set line-height to 0.05px for a better appearance */
   cursor: pointer;
 }
 a {
-  color: #333;
-  text-align: center;
-  text-decoration: none;
+  color: #333; /* Set link text color to #333 */
+  text-align: center; /* Set link text alignment to center */
+  text-decoration: none; /* Remove underline from links */
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Add underline to links on hover */
 }
 /* Desktop */
 .input-box {
-  position: sticky;
-  top: 20px;
+  position: sticky; /* Position the input and output boxes sticky to the top */
+  top: 20px; /* Set the top position of the input box to 20px */
 }
 .output-box {
-  position: sticky;
-  top: 80px;
+  position: sticky; /* Position the input and output boxes sticky to the top */
+  top: 80px; /* Set the top position of the output box to 80px */
 }
 /* Mobile */
 @media (max-width: 768px) {
   .input-box,
   .output-box {
-    position: absolute;
+    position: absolute; /* Position the input and output boxes for mobile layout */
     top: 0;
   }
   .input-box {
-    left: 0;
-    width: 50%;
+    left: 0; /* Position the input box at the left side */
+    width: 50%; /* Set the width of the input box */
   }
   .output-box {
-    right: 0;
-    width: 50%;
+    right: 0; /* Position the output box at the right side */
+    width: 50%; /* Set the width of the output box */
 }}
