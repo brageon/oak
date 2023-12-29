@@ -31,16 +31,14 @@ h1 {
   .contact {
     width: 33%;
     margin: 0 auto;
-  }
-}
+}}
 /* Mobile */
 @media (max-width: 768px) {
   .bio,
   .projects
   .contact {
     width: 100%;
-  }
-}
+}}
 #promptButton {
   position: fixed;
   top: 46%;
@@ -77,7 +75,7 @@ a:hover {
 @media (max-width: 768px) {
   .input-box,
   .output-box {
-    position: absolute;
+    position: relative;
     top: 0;
   }
   .input-box {
@@ -87,4 +85,4 @@ a:hover {
   .output-box {
     right: 0;
     width: 50%;
-  }}
+}}
