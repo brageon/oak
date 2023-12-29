@@ -8,8 +8,7 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   padding: 80px;
-  background-color: #f4f4f4;
-  justify-content: center;
+  background-color: #f4f4f4;  
   align-items: center;
 }
 .header {
@@ -30,14 +29,16 @@ h1 {
 /* Desktop */
 @media (min-width: 768px) {
   .bio,
-  .projects {
+  .projects
+  .contact {
     width: 33 %; 
     margin: 0 auto;
   }}
 /* Mobile */
 @media (max-width: 768px) {
   .bio,
-  .projects {
+  .projects
+  .contact {
     width: 100%; 
   }
   .input-box,
