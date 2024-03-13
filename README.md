@@ -1,0 +1,3 @@
+This should be a text-to-int translator with repo rest as backend. This is my testimonial for CORS workflows. AWS Lambda to Flask endpoint between repos is a bonus. Feel free to contact me at support@brageon.com for pull request or another good-to-know or good-to-have-feature.
+
+Codespace is (1) track record without PRs: git stash for temporary git commit, git rev-list --count --all, git rebase -i HEAD~122, sed -i 's/pick/drop/g' .git/rebase-merge/*-todo, git add ., git commit -m "Setup", git push -u origin (2) branch: git checkout -b "main", git push origin main, git log, git reset --hard "commit-SHA" to discard all commits after a certain date. (3) wrap it up: git pull origin main, git config pull.rebase true, git push -u origin, git push origin gh-pages --force.

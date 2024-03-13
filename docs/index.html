@@ -3,43 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name's Bio</title>
+  <title>Pipeline with CORS</title>
   <link rel="stylesheet" href="styles_1.css">
 </head>
 <body>
-  <header>
-      <img src="profile-picture.png" alt="Your Name" class="profile-img">
-      <h1>Your Name</h1>
-      <p>Web Developer, Programmer, and Tech Student</p>
-      <p>Follow me on social media:</p>
-      <p>
-          <a href="https://twitter.com/yourusername"
-          target="_blank">Twitter</a> |
-          <a href="https://linkedin.com/in/yourusername"
-          target="_blank">LinkedIn</a>
-      </p>
+  <header style="text-align: center;">
+    <img src="profile-picture.png" alt="Your Name" class="profile-img">
+    <h2>Daniel Jonsson</h2>  
+    <p>Software developer and DevOps investigator.</p>
   </header>
-  <main>
-      <section class="bio">
-          <h2>About Me</h2>
-          <p>Hello! I'm Your Name, a web developer with a passion
-              for front-end design and user experience.
-              I've been building websites for over 5 years
-                and love what I do.</p>
-          <!-- Add more paragraphs as needed -->
-      </section>
-      <section class="projects">
-          <h2>Projects</h2>
-          <ul>
-              <li><a href="#">Project One</a></li>
-              <li><a href="#">Project Two</a></li>
-              <li><a href="#">Project Three</a></li>
-              <!-- Add more list items as needed -->
-          </ul>
-      </section>
+  <main style="text-align: center;">
+  <button id="promptButton">Modality</button>
+  <script src="act.js"></script>
+  <script>
+    const promptButton = document.getElementById('promptButton');
+    promptButton.addEventListener('click', async () => {
+    const userInput = await prompt('Enter your message:');
+    const payload = { message: userInput };
+    try {
+      const response = await fetch('https://api.github.com/repos/brageon/rest/.github/workflows/process-input.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: { 'Authorization': `token ${secrets.REPO_B}` } });
+      if (!response.ok) { throw new Error(`Error triggering workflow: ${response.statusText}`); }
+      console.log('Action triggered successfully!');
+      } catch (error) { console.error('Error triggering action:', error); } });
+  </script>
+    <div class="input-box">
+      <input type="text" id="input" onkeyup="translate()" />
+      <button onclick="translate()">Translate</button>
+    </div>
+    <div class="output-box">
+      <input type="text" id="output" disabled />
+    </div>
+    <script>
+      function translate() {
+        const inputText = document.getElementById('input').value;
+        const translations = [];
+        for (const letter of inputText) {
+          const asciiCode = letter.charCodeAt();
+          const integer = asciiCode - 96;
+          translations.push(integer); }
+        const outputText = translations.join(', ');
+        document.getElementById('output').value = outputText; }
+      const input = document.getElementById('input');
+      input.addEventListener('keyup', translate);
+      document.getElementById('translateButton').addEventListener('click', translate);
+    </script>  
+    <div class="bio">        
+      <p>  
+      <h3>About Me</h3>          
+      <p>I have 6 years experience of all different kinds of IT fields. My strength is my vitality and I love exercise. I use Github secrets instead of Pangea Vault action.</p>
+    </div>
+    <div class="projects">
+    <p>
+    <h3>Projects</h3>
+    <ul>
+      <p><a href="#">Project One</a></p>
+      <p><a href="#">Project Two</a></p>
+      <p><a href="#">Project Three</a></p>
+    <p>
+    </ul>
+    </div>
+    <div class="contact">
+    <p>
+    <h3>Contact</h3>
+    <p>Follow me on social media:</p>
+    <p>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </p>
+    </div>
   </main>
-  <footer>
-      <p>Contact me at <a href="mailto:your.name@example.com">your.name@example.com</a></p>
-  </footer>
 </body>
 </html>
