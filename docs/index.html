@@ -14,12 +14,8 @@
   </header>
   <main style="text-align: center;">
   <button id="promptButton">Modality</button>
-  <div class="input-box">
-    <input type="text" id="input" onkeyup="translate()" />
-    <button onclick="translate()">Translate</button>
-  </div>
   <script>
-    const promptButton = document.getElementById('input-box');
+    const promptButton = document.getElementById('promptButton');
     promptButton.addEventListener('click', async () => {
     const userInput = await prompt('Enter your message:');
     const payload = { message: userInput };
@@ -32,6 +28,10 @@
       console.log('Action triggered successfully!');
       } catch (error) { console.error('Error triggering action:', error); } });
   </script>
+  <div class="input-box">
+    <input type="text" id="input" onkeyup="translate()" />
+    <button onclick="translate()">Translate</button>
+  </div>
   <div class="output-box">
     <input type="text" id="output" disabled />
   </div>
