@@ -14,13 +14,12 @@
   </header>
   <main style="text-align: center;">
   <button id="promptButton">Modality</button>
-  </main>
+  <div class="input-box">
+    <input type="text" id="input" onkeyup="translate()" />
+    <button onclick="translate()">Translate</button>
+  </div>
   <script>
-    <div class="input-box">
-      <input type="text" id="input" onkeyup="translate()" />
-      <button onclick="translate()">Translate</button>
-    </div>
-    const promptButton = document.getElementById('translate');
+    const promptButton = document.getElementById('input-box');
     promptButton.addEventListener('click', async () => {
     const userInput = await prompt('Enter your message:');
     const payload = { message: userInput };
@@ -32,47 +31,47 @@
       if (!response.ok) { throw new Error(`Error triggering workflow: ${response.statusText}`); }
       console.log('Action triggered successfully!');
       } catch (error) { console.error('Error triggering action:', error); } });
-    <div class="output-box">
-      <input type="text" id="output" disabled />
-    </div>
   </script>
-    <script>
-      function translate() {
-        const inputText = document.getElementById('input').value;
-        const translations = [];
-        for (const letter of inputText) {
-          const asciiCode = letter.charCodeAt();
-          const integer = asciiCode - 96;
-          translations.push(integer); }
-        const outputText = translations.join(', ');
-        document.getElementById('output').value = outputText; }
-      const input = document.getElementById('input');
-      input.addEventListener('keyup', translate);
-      document.getElementById('translateButton').addEventListener('click', translate);
-    </script>  
-    <div class="bio">        
-      <p>  
-      <h3>About Me</h3>          
-      <p>I have 6 years experience of all different kinds of IT fields. My strength is my vitality and I love exercise. I use Github secrets instead of Pangea Vault action. Codepen is useless for CDN specific DevOps.</p>
-    </div>
-    <div class="projects">
-    <p>
-    <h3>Resume</h3>
-    <ul>
-      <p><a href="#">Rest my writing</a></p>
-      <p><a href="#">Alert treshold for Reddit bots</a></p>
-      <p><a href="#">Lead pipeline with serverless endpoints</a></p>
-    <p>
-    </ul>
-    </div>
-    <div class="contact">
-    <p>
-    <h3>Contact</h3>
-    <p>Follow me on social media:</p>
-    <p>
-    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-    </p>
-    </div>
+  <div class="output-box">
+    <input type="text" id="output" disabled />
+  </div>
+  <script>
+    function translate() {
+      const inputText = document.getElementById('input').value;
+      const translations = [];
+      for (const letter of inputText) {
+        const asciiCode = letter.charCodeAt();
+        const integer = asciiCode - 96;
+        translations.push(integer); }
+      const outputText = translations.join(', ');
+      document.getElementById('output').value = outputText; }
+    const input = document.getElementById('input');
+    input.addEventListener('keyup', translate);
+    document.getElementById('translateButton').addEventListener('click', translate);
+  </script>  
+  <div class="bio">        
+    <p>  
+    <h3>About Me</h3>          
+    <p>I have 6 years experience of all different kinds of IT fields. My strength is my vitality and I love exercise. I use Github secrets instead of Pangea Vault action. Codepen is useless for CDN specific DevOps.</p>
+  </div>
+  <div class="projects">
+  <p>
+  <h3>Resume</h3>
+  <ul>
+    <p><a href="#">Rest my writing</a></p>
+    <p><a href="#">Alert treshold for Reddit bots</a></p>
+    <p><a href="#">Lead pipeline with serverless endpoints</a></p>
+  <p>
+  </ul>
+  </div>
+  <div class="contact">
+  <p>
+  <h3>Contact</h3>
+  <p>Follow me on social media:</p>
+  <p>
+  <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+  </p>
+  </div>
   </main>
 </body>
 </html>
